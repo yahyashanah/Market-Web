@@ -4,22 +4,33 @@ import { HeaderComponent } from './components/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
-
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SelectComponent } from './components/select/select.component';
+import { ProductComponent } from '../products/components/product/product.component';
+import { FormsModule } from '@angular/forms';
+import { AllProductsComponent } from '../products/components/all-products/all-products.component';
+import { CartComponent } from '../carts/components/cart/cart.component';
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SelectComponent,
+    CartComponent,
+    AllProductsComponent,
+
   ],
   imports: [
     CommonModule,
     BrowserModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports : [
-    HeaderComponent
+    HeaderComponent,
+    SelectComponent,
+    FormsModule
   ]
 })
 export class SharedModule { }

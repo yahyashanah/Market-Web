@@ -4,9 +4,10 @@ import { AllProductsComponent } from './products/components/all-products/all-pro
 import { ProductsDetailsComponent } from './products/components/products-details/products-details.component';
 import { CartComponent } from './carts/components/cart/cart.component';
 
+
 const routes: Routes = [
   {path:"products" , component:AllProductsComponent},
-  {path:"details" , component:ProductsDetailsComponent},
+  {path:"details/:id" , component:ProductsDetailsComponent},
   {path:"cart", component:CartComponent},
   {path:"**", redirectTo:"products" , pathMatch:"full"}
 ];
